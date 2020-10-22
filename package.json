@@ -1,11 +1,11 @@
 {
-  "name": "savvy-starter",
+  "name": "nodejs-express-api-curriculum",
   "version": "1.0.0",
-  "description": "",
+  "description": "An introductory course for NodeJS using the Express Framework and MongoDB",
   "main": "index.js",
   "scripts": {},
   "keywords": [],
-  "author": "",
+  "author": "Johan B Bester",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -19,6 +19,7 @@
     "stylelint-vscode": "^7.0.0-6"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.9"
   }

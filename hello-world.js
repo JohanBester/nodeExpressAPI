@@ -14,5 +14,5 @@ app.get("/", (req, res) => res.send("Hello World!"));
 // Now, pass that in like so:
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-// You can start this web server up by running 'node hello-world.js'
+// Start this web server up by running 'node hello-world.js'
 // Open a browser to http://localhost:3000/ you should see "Hello World!"
