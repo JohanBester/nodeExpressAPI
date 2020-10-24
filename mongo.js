@@ -21,17 +21,21 @@ let db_status = "MongoDB connection not successful.";
 
 // Listen for "error" events about connection issues.
 db.on("error", console.error.bind(console, "connection error:"));
+
 // Tell if connection was successful and update status
 db.once("open", () => (db_status = "Successfully opened connection to Mongo!"));
 
 // Send the user the status of the database
-res.send(db_status);
+app.get("/", (req, res) => {
+  res.send(db_status);
+});
 
 // we need a port to listen this was declared in the port constant
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 // to run this, first install mongodb-runner
 // "npm install -g mongodb-runner"
+
 // Then run "mongodb-runner start"
 // then run "node mongo.js"
 // If connected successfully, one should be able to navigate to http://localhost:3000/ and see the words "Successfully opened connection to Mongo!".

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "An introductory course for NodeJS using the Express Framework and MongoDB",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    
+  },
   "keywords": [],
   "author": "Johan B Bester",
   "license": "ISC",
