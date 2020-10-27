@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "An introductory course for NodeJS using the Express Framework and MongoDB",
   "main": "index.js",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "keywords": [],
   "author": "Johan B Bester",
   "license": "ISC",
@@ -23,6 +21,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.9"
+    "mongoose": "^5.10.9",
+    "yargs-parser": "^20.2.3"
   }
 }
