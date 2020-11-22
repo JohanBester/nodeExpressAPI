@@ -29,6 +29,24 @@ app.post("/posts", (req, res) => {
   });
 });
 
+// Set up a READ operation that reads all records and displays them
+// Using the Post constant created to query with the pattern {} which means all posts, with no constraints
+app.get("/posts", (req, res) => {
+  Post.find({}, (error, data) => {
+    if (error) return res.sendStatus(500).json(error);
+    return res.json(data);
+  });
+});
+
+// To return just a single post, do the following:
+// Pass the id of the post into the request query string.
+app.get("/posts/:postId", (req, res) => {
+  Post.findById(req.params.postId, (error, data) => {
+    if (error) return res.sendStatus(500).json(error);
+    return res.json(data);
+  });
+});
+
 let db_status = "MongoDB connection not successful.";
 
 db.on("error", console.error.bind(console, "connection error:"));
@@ -39,4 +57,4 @@ db.once("open", () => (db_status = "Successfully opened connection to Mongo!"));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 // to test this, start your server by running ...about
-// node create.js
+// node reading.js
